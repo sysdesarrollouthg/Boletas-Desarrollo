@@ -1,0 +1,3 @@
+<?php
+define('CONCEPTO_SEL_PARA_CONVENIO_NUEVO', 3);
+?>

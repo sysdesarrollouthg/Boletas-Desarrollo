@@ -1,0 +1,11 @@
+RewriteEngine On
+Options All -Indexes
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9/]+)$ index.php?views=$1 [L,QSA]
+RewriteRule ^boleta\.pdf$ generarboleta.php [L]
+
+ErrorDocument 403 index.php?views=404
+ErrorDocument 404 index.php?views=404
